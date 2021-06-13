@@ -16,7 +16,8 @@
     <script>
       function hoge() {
         fetch(
-          "https://graph.facebook.com/17843900656018477/recent_media?user_id=17841447571286718&fields=id,media_url,media_type,permalink,children{id,media_type,media_url,permalink}&access_token=EAAGhQ8fkHakBAPyOdRvopjHKDWKnRqGeuMysPcMzFbch5r4ffF1IMjpr82CU5tZAbdXDZCcsFS8MeJTISgGRpobC6lBeQpx2RVG7CVtoB5mSqmJI8BpIGLZCHjS5ZBv1kL8e3sYJai3uMDX1FZCgZCUaueb1mYmt5N9ZBy1jsBCSyQoIG6FZAZCMyqYqe46Xy3gYllqi13XhD418ene8sW6pY6rRglfdeb3L4UTvTHlILy6ZAnHROO2rO3"
+          "https://graph.facebook.com/17843900656018477/recent_media?user_id=17841447571286718&fields=id,media_url,media_type,permalink,children{id,media_type,media_url,permalink}&access_token=EAAGhQ8fkHakBABaLujlv1mZC6HxPzBGcNgDDZAAHvm5mb4DJ2dixNTloNwrNbt64c4GK8O3QFqZBl1X2IWojwvdfMa97wK3ZC7Nnd0I0eVlzPVz2uTpUZAFquKhy6ZA9xiDyJ9LQ0UaLDZChadX6OAm3AvHEdReMaml2wrfTclhnztIPWAVoXkgJpj15A7g8cgzdzXvDbXiTJUOW9HOR72ZCwi0nW9XxjmW3us3w7ZCSxugzlQLbrZAzGB",
+          { mode: "cors" }
         ).then((response) => {
           response
             .json() //ここでbodyからJSONを返す
@@ -28,7 +29,7 @@
             });
         });
       }
-      hoge()
+      hoge();
     </script>
     <div class="gallery">
       <div class="swiper-container gallery-thumbs">
